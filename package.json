@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "rm -rf dist && tsc",
+    "build": "tsc",
     "start": "npm run build && node dist/index.js",
     "lint": "eslint '*/**/*.{js,ts}' --fix",
     "jasmine": "jasmine",
     "test": "npm run build && npm run jasmine",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "format": "prettier --write src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/moramadan94/Image_Processing_Api#readme",
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/image-size": "^0.8.0",
     "@types/jasmine": "^4.0.3",
     "@types/sharp": "^0.30.4",
     "@types/supertest": "^2.0.12",
@@ -44,6 +46,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "express": "^4.18.1",
+    "image-size": "^1.0.1",
     "sharp": "^0.30.7"
   }
 }

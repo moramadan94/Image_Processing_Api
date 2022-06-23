@@ -11,10 +11,13 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-var-requires': 0,
     'prettier/prettier': 2, // Means error
     quotes: ['error', 'single'],
-    'no-console': 1, // Means warning
+    'no-console': 0,
     'no-var': 'error',
     'prefer-const': 'error',
+    'no-undef': 0,
   },
 };

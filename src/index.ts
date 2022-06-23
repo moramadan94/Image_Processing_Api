@@ -16,6 +16,7 @@ app.listen(port, (): void => {
   if (!fs.existsSync(thumbPath)) {
     fs.mkdirSync(thumbPath);
   }
+  console.log(`Server is working! , Running on port ${port}`);
 });
 
 export default app;
