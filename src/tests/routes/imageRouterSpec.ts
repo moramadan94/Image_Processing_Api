@@ -26,7 +26,7 @@ describe('GET /api/images', () => {
     request(app)
       .get('/api/images?filename=fjord&height=100&width=100')
       .then(() => {
-        fs.stat(path.resolve(__dirname, '../../../assets/thumb/fjord-100x100.jpg')).then((fileStat: Stats) =>
+        fs.stat(path.resolve(__dirname, '../../../src/assets/thumb/fjord-100x100.jpg')).then((fileStat: Stats) =>
           expect(fileStat).not.toBeNull(),
         );
         done();
@@ -37,7 +37,7 @@ describe('GET /api/images', () => {
     request(app)
       .get('/api/images?filename=fjord&height=100&width=150')
       .then(() => {
-        const dimensions = sizeOf(path.resolve(__dirname, '../../../assets/thumb/fjord-100x150.jpg'));
+        const dimensions = sizeOf(path.resolve(__dirname, '../../../src/assets/thumb/fjord-100x150.jpg'));
         expect(dimensions.height).toEqual(100);
         expect(dimensions.width).toEqual(150);
         done();
